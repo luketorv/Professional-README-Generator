@@ -1,5 +1,5 @@
 //packages needed for this application
-irer = require("inquirer");
+const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
@@ -24,6 +24,12 @@ const promptUser = () => {
             name:'description',
             message:'Describe the project:'
         },
+        {
+            type:'list',
+            name:'license',
+            message:'Which license would you like to select?:',
+            choices:["MIT","Apache 2.0","None"]
+        },           
         {
             type:'input',
             name:'installation',
